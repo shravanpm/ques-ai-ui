@@ -1,0 +1,151 @@
+.homeContainer {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.homeLeft {
+  width: 70%;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.waveOverlay {
+  background: url("https://res.cloudinary.com/dmpdvpvqt/image/upload/v1744799578/wave.png")
+    no-repeat center center;
+  background-size: cover;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+}
+
+.leftContent {
+  position: relative;
+  z-index: 1;
+}
+
+.leftContentTitle {
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.leftContentText {
+  font-size: 1.2em;
+}
+
+.loginRight {
+  width: 30%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.formBox {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.brand {
+  color: #6a11cb;
+}
+
+.input {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+
+.loginBtn {
+  background: #6a11cb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.separator {
+  text-align: center;
+  position: relative;
+  margin: 10px 0 20px;
+}
+
+.separatorText {
+  background: white;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  left: 0;
+  z-index: 0;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.signupLink {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9em;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.homeRightLogo {
+  width: 50.36279296875px;
+  height: 30.19952392578125px;
+  top: 78.24px;
+  left: 1491.73px;
+  border-width: 9.27px;
+  align-self: center;
+}

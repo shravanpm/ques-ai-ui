@@ -1,0 +1,251 @@
+.container {
+  width: 95%;
+  display: flex;
+  height: 95vh;
+  margin: auto;
+  margin-top: 0em;
+  /* border: 1px solid green; */
+}
+
+.leftSection {
+  width: 30%;
+  /* height: 98vh; */
+  margin-top: 3rem;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSection {
+  width: 70%;
+  /* border: 1px solid red; */
+  background-color: #ede9e9;
+  padding: 3rem;
+  height: 95vh;
+  padding-bottom: 5rem;
+  border-radius: 10px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.leftSectionOption {
+  display: flex;
+  margin-top: 5px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.leftSectionOption p {
+  margin-left: 5px;
+  color: #646464;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.userIcons img {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.lineBreak {
+  border: 1.3px solid rgb(204, 204, 204);
+  width: 75%;
+}
+
+.userName {
+  margin-bottom: -10px;
+  padding-bottom: 0px;
+}
+
+.email {
+  margin-left: 5px;
+  font-size: 12px;
+  margin-top: -25px;
+}
+
+.rightSectionNavbar {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.rightSectionNavbar img {
+  height: 15px;
+  width: 15px;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+.current {
+  color: #a855f7; /* purple */
+  font-weight: 500;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.options {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.optionCard {
+  flex: 1;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.optionCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.optionCard img {
+  width: 40px;
+  height: 40px;
+}
+
+.uploadBox {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.uploadIcon {
+  width: 50px;
+  margin-bottom: 16px;
+  color: #a855f7;
+}
+
+.fileFormats {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.selectBtn {
+  padding: 10px 24px;
+  border: 2px solid #a855f7;
+  background: transparent;
+  color: #a855f7;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.selectBtn:hover {
+  background-color: #a855f7;
+  color: white;
+}
+
+.modalTitle img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+
+.modalBody div {
+  font-size: 10px;
+}
+
+.input {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.textArea {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.filesList {
+  padding: 2rem;
+  background: white;
+  overflow: scroll;
+  height: 40vh;
+  border-radius: 10px;
+}
+
+.fileTable {
+  width: 100%;
+  border-collapse: collapse;
+  /* overflow-y: scroll; */
+}
+
+.fileTable th {
+  text-align: left;
+  background-color: #f2f2f2;
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  /* height: 5vh; */
+  /* overflow-y: scroll; */
+}
+
+.fileTable td {
+  padding: 12px 10px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: #222;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.viewBtn {
+  padding: 6px 14px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.deleteBtn {
+  padding: 6px 14px;
+  background-color: #fff;
+  color: #e63946;
+  border: 1px solid #e63946;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
