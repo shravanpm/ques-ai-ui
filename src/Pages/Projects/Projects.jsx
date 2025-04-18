@@ -1,15 +1,63 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Projects.module.css";
 import { Modal, Button } from "react-bootstrap";
 import { ProjectCard } from "./Components/ProjectCard/ProjectCard";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext/UserContext";
+import axios from "axios";
+import { config } from "../../config/config";
+import { convertISOTimeToString } from "../../utils/utils";
 
 export const Projects = () => {
-  const [projects, setProjects] = useState([{}]);
+  const [projects, setProjects] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [projectName, setProjectName] = useState("");
+  const { userAuth } = useContext(UserContext);
 
   const handleCloseModal = () => setOpenModal(false);
   const handleOpenModal = () => setOpenModal(true);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProjectName(value);
+  };
+
+  const getAllProjects = async () => {
+    try {
+      const { data } = await axios({
+        url: `${config.base_url}/project/files`,
+        headers: { Authorization: `Bearer ${userAuth.token}` },
+        method: "GET",
+      });
+      console.log({ projects: data.projects });
+      setProjects(data?.projects);
+    } catch (error) {
+      // TODO
+      return error;
+    }
+  };
+
+  const handleAddProject = async () => {
+    try {
+      const { data } = await axios({
+        url: `${config.base_url}/project`,
+        headers: { Authorization: `Bearer ${userAuth.token}` },
+        method: "POST",
+        data: { name: projectName },
+      });
+      handleCloseModal();
+      await getAllProjects();
+    } catch (error) {
+      // TODO
+      return error;
+    }
+  };
+  useEffect(() => {
+    (async function () {
+      await getAllProjects();
+    })();
+    // (async function(getAllProjects()))()
+  }, []);
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -39,14 +87,19 @@ export const Projects = () => {
         <Modal.Body>
           <div style={{ width: "100%" }}>
             <p>Enter your project name:</p>
-            <input type="text" className={styles.input} />
+            <input
+              type="text"
+              className={styles.input}
+              name="name"
+              onChange={handleChange}
+            />
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={() => alert("Project Created")}>
+          <Button variant="primary" onClick={handleAddProject}>
             Create
           </Button>
         </Modal.Footer>
@@ -118,17 +171,26 @@ export const Projects = () => {
             </div>
           </div>
           {/* Project list */}
-          <div
-            className={styles.projectsGridContainer}
-            // style={{
-            //   width: "95%",
-            //   marginTop: "1em",
-            //   margin: "auto",
-            //   display: "grid",
-            // }}
-          >
-            {projects.map((item, key) => {
-              return <ProjectCard />;
+          {/* {
+    "_id": "6801e71399c295722c7a1609",
+    "name": "test",
+    "user": "6801b0710a471ba086302814",
+    "createdAt": "2025-04-18T05:45:55.967Z",
+    "updatedAt": "2025-04-18T05:45:55.967Z",
+    "files": []
+} */}
+          <div className={styles.projectsGridContainer}>
+            {projects.map((item) => {
+              return (
+                <ProjectCard
+                  key={item._id}
+                  id={item._id}
+                  initials={item?.name?.slice(0, 2)}
+                  title={item?.name}
+                  fileCount={item?.files?.length}
+                  lastEdited={convertISOTimeToString(item?.updatedAt)}
+                />
+              );
             })}
           </div>
         </div>

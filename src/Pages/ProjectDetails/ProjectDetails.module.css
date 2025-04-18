@@ -34,6 +34,7 @@
 .leftSectionOption {
   display: flex;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .icons img {
@@ -49,6 +50,7 @@
   color: #646464;
   font-weight: 600;
   font-size: 20px;
+  margin-top: 3px;
 }
 
 .userIcons img {
@@ -89,7 +91,7 @@
 }
 
 .current {
-  color: #a855f7; /* purple */
+  color: #a855f7;
   font-weight: 500;
 }
 
@@ -155,7 +157,6 @@
   border-radius: 25px;
   font-weight: 500;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 .selectBtn:hover {
@@ -215,8 +216,6 @@
   font-size: 12px;
   font-weight: 600;
   color: #333;
-  /* height: 5vh; */
-  /* overflow-y: scroll; */
 }
 
 .fileTable td {
@@ -248,4 +247,8 @@
   border-radius: 6px;
   cursor: pointer;
   font-size: 13px;
+}
+
+.activeOption p {
+  color: #a855f7;
 }
