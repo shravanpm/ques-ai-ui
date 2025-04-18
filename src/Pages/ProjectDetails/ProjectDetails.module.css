@@ -25,6 +25,7 @@
   height: 95vh;
   padding-bottom: 5rem;
   border-radius: 10px;
+  min-height: 500px;
 }
 
 .logo {
@@ -251,4 +252,17 @@
 
 .activeOption p {
   color: #a855f7;
+}
+
+.editTranscriptBox {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.editTranscriptBox textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
 }
