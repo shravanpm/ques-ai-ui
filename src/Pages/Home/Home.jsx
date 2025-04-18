@@ -76,7 +76,6 @@ export const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.homeLeft}>
-        <div className={styles.waveOverlay} />
         <div className={styles.leftContent}>
           <img
             src="https://res.cloudinary.com/dmpdvpvqt/image/upload/v1744799828/ques/QuesLogo_1_h9fukz.png"

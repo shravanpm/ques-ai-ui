@@ -1,3 +1,3 @@
 export const config = {
-  base_url: "http://localhost:5000/api",
+  base_url: "https://ques-ai-service-1.onrender.com/api",
 };
