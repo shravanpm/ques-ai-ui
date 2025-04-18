@@ -1,7 +1,7 @@
 .homeContainer {
   display: flex;
   height: 100vh;
-  font-family: "Segoe UI", sans-serif;
+  min-height: 500px;
 }
 
 .homeLeft {
@@ -13,7 +13,9 @@
   padding: 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
+
+  border: 1px solid red;
 }
 
 .waveOverlay {
@@ -28,6 +30,7 @@
 .leftContent {
   position: relative;
   z-index: 1;
+  margin-top: -20px;
 }
 
 .leftContentTitle {
@@ -40,13 +43,15 @@
   font-size: 1.2em;
 }
 
-.loginRight {
+.rightContent {
   width: 30%;
   background: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 60px;
+  margin-top: -20px;
+  border: 1px solid red;
 }
 
 .formBox {
@@ -54,6 +59,7 @@
   max-width: 350px;
   display: flex;
   flex-direction: column;
+  position: absolute;
 }
 
 .formTitle {
@@ -134,6 +140,7 @@
   text-align: center;
   margin-top: 16px;
   font-size: 0.9em;
+  cursor: pointer;
 }
 
 .logo {
